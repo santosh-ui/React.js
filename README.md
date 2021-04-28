@@ -16,3 +16,11 @@ Learn React JS
 * cd .. - Navigate to parent / One Level UP
 * clear - clear console
 * Arrow key up/down - previous commands
+
+## NPM
+* npm init - creates package.json (manifest) file, list dependencies
+* npm install <package name> --save - Install package locally (default) and add to package.json
+* npm install <package name> -g - Install package globally access (anywhere) SUDO
+* npm install <package name> --save-dev - Use it only in development
+
+-- To open terminal in vs-code use (ctrl+`(tilda)(left of 1 key)) 
