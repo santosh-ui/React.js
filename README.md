@@ -24,3 +24,10 @@ Learn React JS
 * npm install <package name> --save-dev - Use it only in development
 
 -- To open terminal in vs-code use (ctrl+`(tilda)(left of 1 key)) 
+
+## Editor Extensions
+* Prettier
+* Emmet change in settings.json
+* ES7 React/Redux/GraphQL/React-Native snippets by dsznajder
+
+
