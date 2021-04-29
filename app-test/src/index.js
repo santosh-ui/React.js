@@ -26,29 +26,57 @@ import ReactDom from "react-dom";
 //   );
 // };
 
-const Greeting = () => {
-  return React.createElement("div", {}, 
-    React.createElement("h1", {}, "Hello World"));
-}
+// const Greeting = () => {
+//   return React.createElement("div", {}, 
+//     React.createElement("h1", {}, "Hello World"));
+// }
 
-ReactDom.render(
-  <Greeting/>, document.getElementById("root")
-); 
+// ReactDom.render(
+//   <Greeting/>, document.getElementById("root")
+// ); 
 // In react we must not leave the tags unclosed eg. <Greeting>, we can do 
 /* <Greeting></Greeting> this or <Greeting/> this. */
 // In react you must have the self-closing tag if there is no closing-tag.
 
+// ---------------------------------------------------------------------------
 
+// JSX Rules
+// Always Return a single element
+// div / section / article or Fragment
+// Use camelCase for HTML attribute
+// className instead of class
+// Close every element
+// formatting
 
+const Greeting = () => {
+  return (
+    <React.Fragment>
+    <section>
+      <article>
+        <div className="">
+        <h1>Hello Friends</h1>
+          <ul>
+            <li>
+              <a href="#">Hello</a>
+            </li>
+          </ul>
+          <img src="" alt=""/>
+          <input type="text" name="" id=""/>
+        </div>
+      </article>
+    </section>    
+    <div></div> 
+    {/* // only return single element 
+        or instead wrap it in <>..</>*/}
+    </React.Fragment>
+  );
+};
 
+ReactDom.render(
+  <Greeting/>, document.getElementById("root")
+); 
 
-
-
-
-
-
-
-
+// --------------------------------------------------------------------------------------------------
 
 // I dont like to clean the file so I'm commenting the code below for not effecting the upper part
 
