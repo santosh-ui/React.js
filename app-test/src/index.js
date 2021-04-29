@@ -8,13 +8,32 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-function Greeting() { // we need to capitalize the name for react to know that it is special
+// Stateless functional component
+// always return jsX
+
+// function Greeting() { // we need to capitalize the name for react to know that it is special
   // ie, it is a component and then from react component we would want to return HTML
   // technically it is not called "HTML", it is jsX
-  return <h4>This is Santosh. This is my first component.</h4>;
+  // return <h4>This is Santosh. This is my first component.</h4>; // this is jsX
+  // always MUST return something or else you'll have a big fat error
+// }
+
+// function Greeting() {
+//   return (
+//     <div>
+//       <h1>Hello World!</h1>
+//   </div>
+//   );
+// };
+
+const Greeting = () => {
+  return React.createElement("div", {}, 
+    React.createElement("h1", {}, "Hello World"));
 }
 
-ReactDom.render(<Greeting/>, document.getElementById("root")); 
+ReactDom.render(
+  <Greeting/>, document.getElementById("root")
+); 
 // In react we must not leave the tags unclosed eg. <Greeting>, we can do 
 /* <Greeting></Greeting> this or <Greeting/> this. */
 // In react you must have the self-closing tag if there is no closing-tag.
