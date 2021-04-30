@@ -9,12 +9,13 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #f1f5f8;
   color: #222;
+  /* text-align: center; */
 }
 
 .bookList {
   width: 90vw;
   max-width: 1170px;
-  margin: 5rem auto;
+  margin: 2rem auto 5rem;
   display: grid;
   gap: 2rem;
 }
