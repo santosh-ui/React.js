@@ -112,28 +112,42 @@ import "./index.css";
 // ------------------------------------------------------------------------------------------
 
 // Mini Book Project
+// vars
+const firstBook = {
+  img: "https://images-eu.ssl-images-amazon.com/images/I/71aFt4%2BOTOL._AC_UL200_SR200,200_.jpg",
+  title: "The Alchemist",
+  author: "Paulo Coelho",
+}
+const secondBook = {
+  img: "https://images-eu.ssl-images-amazon.com/images/I/81s6DUyQCZL._AC_UL200_SR200,200_.jpg",
+  title: "Think Like a Monk: The secret of how to harness the power of positivity and be happy now",
+  author: "Jay Shetty",
+}
 
 const BookList = () => {
   return (
     <section className="bookList">
-      <Book/>
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aperiam sunt dolorum asperiores minima, animi, mollitia quo magnam qui quam praesentium. Recusandae fuga, ab nihil doloremque quasi hic soluta deleniti.</p>
+      </Book>
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />
+      {/* <Book job="developer" />
+      <Book title="random title" number={25} /> */}
     </section>
-    
   );
 }
 
-const author = "Paulo Coelho";
-const Book = () => {
-  const title = "The Alchemist";
+const Book = (props) => {
+  // console.log(props);
+  const {img, title, author} = props; // props Destructuring
   return (
     <article className="book">
-      <img 
-src="https://images-eu.ssl-images-amazon.com/images/I/71aFt4%2BOTOL._AC_UL200_SR200,200_.jpg" 
-alt=""/>
+      <img src={img} alt=""/>
       <h2>{title}</h2>
       <h4>{author}</h4>
-      {/* <p>{let x = 6;}</p> */}
-      <p>{6+6}</p>
+      {/* <p>{let x = 6;}</p> won't work */}
+      {/* <p>{6+6}</p> will work */}
+      {props.children}
     </article>
   );
 }
