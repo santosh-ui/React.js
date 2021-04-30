@@ -111,35 +111,57 @@ import "./index.css";
 
 // ------------------------------------------------------------------------------------------
 
-// Mini Book Project
+// Mini Book Project,
 // vars
-const firstBook = {
+const books = [
+  {
+  id:1,
   img: "https://images-eu.ssl-images-amazon.com/images/I/71aFt4%2BOTOL._AC_UL200_SR200,200_.jpg",
   title: "The Alchemist",
   author: "Paulo Coelho",
-}
-const secondBook = {
-  img: "https://images-eu.ssl-images-amazon.com/images/I/81s6DUyQCZL._AC_UL200_SR200,200_.jpg",
-  title: "Think Like a Monk: The secret of how to harness the power of positivity and be happy now",
-  author: "Jay Shetty",
-}
+  },
+  {
+    id:2,
+    img: "https://images-eu.ssl-images-amazon.com/images/I/81s6DUyQCZL._AC_UL200_SR200,200_.jpg",
+    title: "Think Like a Monk: The secret of how to harness the power of positivity and be happy now",
+    author: "Jay Shetty",
+  },
+  {
+    id:3,
+    img: "https://images-eu.ssl-images-amazon.com/images/I/61Iz2yy2CKL._AC_UL200_SR200,200_.jpg",
+    title: "The Monk Who Sold His Ferrari",
+    author: "Robin Sharma",
+  }
+];
+
+// const names = ["Santosh", "Tom", "Emily"];
+// const newNames = names.map((name) => {
+//   // console.log(name);
+//   return <h1>{name}</h1>;
+// });
+// console.log(newNames);
 
 const BookList = () => {
   return (
     <section className="bookList">
-      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} >
+      {/* const {img, title, author} = book; */}
+      {books.map((book) => {
+        // console.log(book);
+        return <Book key={book.id} {...book}/>;
+      })}
+      {/* <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aperiam sunt dolorum asperiores minima, animi, mollitia quo magnam qui quam praesentium. Recusandae fuga, ab nihil doloremque quasi hic soluta deleniti.</p>
       </Book>
-      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} /> */}
       {/* <Book job="developer" />
       <Book title="random title" number={25} /> */}
     </section>
   );
 }
 
-const Book = (props) => {
+const Book = ({img, title, author}) => {
   // console.log(props);
-  const {img, title, author} = props; // props Destructuring
+  // const {img, title, author} = props; // props Destructuring
   return (
     <article className="book">
       <img src={img} alt=""/>
@@ -147,7 +169,7 @@ const Book = (props) => {
       <h4>{author}</h4>
       {/* <p>{let x = 6;}</p> won't work */}
       {/* <p>{6+6}</p> will work */}
-      {props.children}
+      {/* {props.children} */}
     </article>
   );
 }
