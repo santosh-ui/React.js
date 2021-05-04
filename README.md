@@ -30,4 +30,19 @@ Learn React JS
 * Emmet change in settings.json
 * ES7 React/Redux/GraphQL/React-Native snippets by dsznajder
 
+# Advanced React
+Started Advanced topics
+* useState
+* useEffect
+* Conditional Rendering
+* forms
+* useRef
+* useReducer
+* Prop Drilling
+* Context API / useContext
+* ... ...
 
+## React Hooks
+why hooks?
+If all we have is a component with some static data or component with a list - life is great
+If we want to make our website dynamic and more complex and as a result our app, we need use React hooks which are functions that React provides
