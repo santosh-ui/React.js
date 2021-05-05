@@ -45,4 +45,4 @@ Started Advanced topics
 ## React Hooks
 why hooks?
 If all we have is a component with some static data or component with a list - life is great
-If we want to make our website dynamic and more complex and as a result our app, we need use React hooks which are functions that React provides
+If we want to make our website dynamic and more complex and as a result our app, we need use React hooks which are functions that React provides to complete various tasks Eg. adding/removing items from the list, doggling the model, fetchig the data and just to name a few. There are quite a few hooks but if you know only two (useState and useEffect) then you are extremely in good shape. conditional rendering, forms in react, prop drilling, context API as was react router which can be useful to build cool and complex react app.
